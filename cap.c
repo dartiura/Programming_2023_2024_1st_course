@@ -13,22 +13,22 @@ int main() {
 	setlocale(LC_ALL, "rus");
 	int number = rand() % 101, guess, numberofguess = 0;
 	int lb = 0, rb = 100;
-	printf("Малыш,подумай своей тыковкой и загадай чилос!\n");
+	printf("РњР°Р»С‹С€,РїРѕРґСѓРјР°Р№ СЃРІРѕРµР№ С‚С‹РєРѕРІРєРѕР№ Рё Р·Р°РіР°РґР°Р№ С‡РёР»РѕСЃ!\n");
 	while (numberofguess != 10) {
 		guess = (rb + lb) / 2;
-		printf("Может быть это %d?", guess);
+		printf("РњРѕР¶РµС‚ Р±С‹С‚СЊ СЌС‚Рѕ %d?", guess);
 		char answer;
 		answer = getchar();
 		getchar();
 		if (answer == '<')
 		{
 			rb = guess - 1;
-			printf("Зайчик,ты не прав,число меньше\n");
+			printf("Р—Р°Р№С‡РёРє,С‚С‹ РЅРµ РїСЂР°РІ,С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ\n");
 			numberofguess++;
 		}
 		if (answer == '>') {
 			lb = guess + 1;
-			printf("Пупсик,число больше\n");
+			printf("РџСѓРїСЃРёРє,С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ\n");
 			numberofguess++;
 		}
 
@@ -51,17 +51,17 @@ int main() {
 	setlocale(LC_ALL, "rus");
 	int number = rand() % 101, guess, numberofguess = 0;
 	
-		printf("Я набрал число от 0 до 100. Попробуй угадать это за 10 попыток.\n");
+		printf("РЇ РЅР°Р±СЂР°Р» С‡РёСЃР»Рѕ РѕС‚ 0 РґРѕ 100. РџРѕРїСЂРѕР±СѓР№ СѓРіР°РґР°С‚СЊ СЌС‚Рѕ Р·Р° 10 РїРѕРїС‹С‚РѕРє.\n");
 		while (numberofguess != 10) {
-			printf("Твоя %d попытка: ", numberofguess + 1);
+			printf("РўРІРѕСЏ %d РїРѕРїС‹С‚РєР°: ", numberofguess + 1);
 			scanf_s("%d", &guess);
 			if (guess > number)
 			{
-				printf("Зайчик,ты не прав,число меньше\n");
+				printf("Р—Р°Р№С‡РёРє,С‚С‹ РЅРµ РїСЂР°РІ,С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ\n");
 				numberofguess++;
 			}
 			if (number > guess) {
-				printf("Пупсик,число больше\n");
+				printf("РџСѓРїСЃРёРє,С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ\n");
 				numberofguess++;
 			}
 
